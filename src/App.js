@@ -8,6 +8,8 @@ import {
 	useParams,
 } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import AskQuestion from './components/AskQuestion';
+import TopQuestions from './components/TopQuestions';
 
 function App() {
 	return (
@@ -15,7 +17,14 @@ function App() {
 			<div className='App'>
 				<Navbar />
 
-				<Switch></Switch>
+				<Switch>
+					<Route exact path='/'>
+						<TopQuestions />
+					</Route>
+					<Route exact path='/askquestion'>
+						<AskQuestion />
+					</Route>
+				</Switch>
 			</div>
 		</Router>
 	);
