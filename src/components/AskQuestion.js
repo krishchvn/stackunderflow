@@ -9,13 +9,14 @@ const AskQuestion = () => {
 	const [hashes, setHashes] = useState('');
 	const [author, setAuthor] = useState('');
 	//	const [id, setId] = useState('');
-	const [date, setDate] = useState('');
+	const [dateTime, setDateTime] = useState('');
+	let sortOrder = 23;
 
 	const format1 = 'YYYY-MM-DD HH:mm:ss';
 
 	const history = useHistory();
 	useEffect(() => {
-		setDate(moment(Date.now()).format(format1));
+		setDateTime(moment(Date.now()).format(format1));
 	}, []);
 
 	const onSubmit = e => {
@@ -31,7 +32,8 @@ const AskQuestion = () => {
 				quesBrief: quesBrief,
 				hashes: hashes,
 				author: author,
-				date: date,
+				dateTime: dateTime,
+				sortOrder: ++sortOrder,
 			})
 			.then(res => {
 				console.log(res.data);
