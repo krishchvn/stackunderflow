@@ -4,7 +4,7 @@ import EachQuestion from './EachQuestion';
 const TopQuestions = () => {
 	const [allQues, setAllQues] = useState(null);
 	const [sortWay, setSortWay] = useState('Latest');
-	const [sortArr, setSortArr] = useState([]);
+	//const [sortArr, setSortArr] = useState([]);
 	const format1 = 'YYYY-MM-DD HH:mm:ss';
 
 	let sortArr1 = [];
@@ -18,18 +18,30 @@ const TopQuestions = () => {
 				if (sortWay === 'Latest') {
 					data.sort((a, b) => b.sortOrder - a.sortOrder);
 				}
-				sortArr1 = data;
 				setAllQues(data);
 			});
 	}, []);
 
 	const sortVal = val => {
+		let sortArr1 = allQues;
+
+		console.log(sortArr1, 'sortArr1');
+
 		if (val === 'Latest') {
-			sortArr1.sort((a, b) => b.sortOrder - a.sortOrder);
+			sortArr1 && sortArr1.sort((a, b) => b.sortOrder - a.sortOrder);
+			setAllQues(sortArr1);
 		} else if (val === 'AZ') {
-			sortArr1.sort((a, b) => b.ques - a.ques);
+			sortArr1 && sortArr1.sort((a, b) => a.ques.localeCompare(b.ques));
+			setAllQues(sortArr1);
+		} else if (val === 'ZA') {
+			sortArr1 && sortArr1.sort((a, b) => b.ques.localeCompare(a.ques));
+			setAllQues(sortArr1);
+		} else if (val === 'Oldest') {
+			sortArr1 && sortArr1.sort((a, b) => a.sortOrder - b.sortOrder);
+			setAllQues(sortArr1);
 		}
-		setSortArr([...allQues]);
+
+		console.log(allQues, 'allQues1');
 	};
 
 	return (
@@ -41,22 +53,42 @@ const TopQuestions = () => {
 					</div>
 					<div className='flex mb-6'>
 						<div className=' transition duration-300 ease-out border-2 border-r-0 border-gray-1050 px-2 py-1 hover:bg-gray-200 '>
-							<button onClick={sortVal('Latest')} className='text-gray-1150'>
+							<button
+								onClick={() => {
+									sortVal('Latest');
+								}}
+								className='text-gray-1150'
+							>
 								Latest
 							</button>
 						</div>
 						<div className=' transition duration-300 ease-out border-2 border-r-0 border-gray-1050 px-2 py-1 hover:bg-gray-200'>
-							<button onClick={sortVal('AZ')} className='text-gray-1150'>
+							<button
+								onClick={() => {
+									sortVal('AZ');
+								}}
+								className='text-gray-1150'
+							>
 								A-Z
 							</button>
 						</div>
 						<div className=' transition duration-300 ease-out border-2 border-r-0 border-gray-1050 px-2 py-1 hover:bg-gray-200 '>
-							<button /* onClick={onClickZA} */ className='text-gray-1150'>
+							<button
+								onClick={() => {
+									sortVal('ZA');
+								}}
+								className='text-gray-1150'
+							>
 								Z-A
 							</button>
 						</div>
 						<div className=' transition duration-300 ease-out border-2 border-gray-1050 px-2 py-1 hover:bg-gray-200 '>
-							<button /* onClick={onClickOldest} */ className='text-gray-1150'>
+							<button
+								onClick={() => {
+									sortVal('Oldest');
+								}}
+								className='text-gray-1150'
+							>
 								Oldest
 							</button>
 						</div>
