@@ -34,6 +34,7 @@ const AskQuestion = () => {
 				author: author,
 				dateTime: dateTime,
 				sortOrder: ++sortOrder,
+				date: Date().toISOString().slice(0, 10),
 			})
 			.then(res => {
 				console.log(res.data);
