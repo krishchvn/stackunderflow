@@ -5,9 +5,7 @@ const TopQuestions = () => {
 	const [allQues, setAllQues] = useState(null);
 	const [sortWay, setSortWay] = useState('Latest');
 	//const [sortArr, setSortArr] = useState([]);
-	const format1 = 'YYYY-MM-DD HH:mm:ss';
-
-	let sortArr1 = [];
+	//const format1 = 'YYYY-MM-DD HH:mm:ss';
 
 	useEffect(() => {
 		fetch('http://localhost:4000/questions')
@@ -17,31 +15,51 @@ const TopQuestions = () => {
 			.then(data => {
 				if (sortWay === 'Latest') {
 					data.sort((a, b) => b.sortOrder - a.sortOrder);
+					//setSortWay(null);
 				}
 				setAllQues(data);
+				//		console.log(allQues);
 			});
 	}, []);
 
 	const sortVal = val => {
-		let sortArr1 = allQues;
+		let sortArr1 = [...allQues];
 
-		console.log(sortArr1, 'sortArr1');
+		//	console.log(sortArr1, 'sortArr1');
 
 		if (val === 'Latest') {
+			setSortWay('Latest');
 			sortArr1 && sortArr1.sort((a, b) => b.sortOrder - a.sortOrder);
 			setAllQues(sortArr1);
 		} else if (val === 'AZ') {
-			sortArr1 && sortArr1.sort((a, b) => a.ques.localeCompare(b.ques));
+			setSortWay('AZ');
+			sortArr1 &&
+				sortArr1.sort(function (a, b) {
+					a = a.ques?.toLowerCase();
+					b = b.ques?.toLowerCase();
+
+					return a < b ? -1 : a > b ? 1 : 0;
+				});
+
 			setAllQues(sortArr1);
 		} else if (val === 'ZA') {
-			sortArr1 && sortArr1.sort((a, b) => b.ques.localeCompare(a.ques));
+			setSortWay('ZA');
+			sortArr1 &&
+				sortArr1.sort(function (a, b) {
+					a = a.ques?.toLowerCase();
+					b = b.ques?.toLowerCase();
+
+					return a > b ? -1 : a > b ? 1 : 0;
+				});
+
 			setAllQues(sortArr1);
 		} else if (val === 'Oldest') {
+			setSortWay('Oldest');
 			sortArr1 && sortArr1.sort((a, b) => a.sortOrder - b.sortOrder);
 			setAllQues(sortArr1);
 		}
 
-		console.log(allQues, 'allQues1');
+		//console.log(allQues, 'allQues1');
 	};
 
 	return (
@@ -77,6 +95,7 @@ const TopQuestions = () => {
 								onClick={() => {
 									sortVal('ZA');
 								}}
+								//	onClick={onSort}
 								className='text-gray-1150'
 							>
 								Z-A
