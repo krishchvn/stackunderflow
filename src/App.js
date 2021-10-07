@@ -10,6 +10,7 @@ import {
 import Navbar from './components/Navbar';
 import AskQuestion from './components/AskQuestion';
 import TopQuestions from './components/TopQuestions';
+import DetailQuestion from './components/DetailQuestion';
 
 function App() {
 	return (
@@ -21,7 +22,10 @@ function App() {
 					<Route exact path='/'>
 						<TopQuestions />
 					</Route>
-					<Route exact path='/askquestion'>
+					<Route path='/question/_id=:id'>
+						<DetailQuestion />
+					</Route>
+					<Route path='/askquestion'>
 						<AskQuestion />
 					</Route>
 				</Switch>

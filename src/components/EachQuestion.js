@@ -1,16 +1,37 @@
 import React from 'react';
 import ReactTimeAgo from 'react-time-ago';
-import moment from 'moment';
+import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
+import IconButton from '@material-ui/core/IconButton';
+import { Link } from 'react-router-dom';
 
-const EachQuestion = ({ id, ques, quesBrief, author, dateTime, hashes }) => {
+const EachQuestion = ({
+	id,
+	ques,
+	quesBrief,
+	author,
+	dateTime,
+	hashes,
+	handleDelete,
+}) => {
 	var lettersAllowed = /^[0-9A-Za-z#]+$/;
 
 	return (
 		<div className='py-5 px-5 pb-16 mb-2 bg-gray-1100 border border-2 rounded-lg shadow-md'>
-			<div className='pb-2'>
-				<p className='text-blue-10 hover:text-blue-1000 text-lg' key={id}>
-					{ques}
-				</p>
+			<Link to={`/question/_id=${id}`} className='hover:no-underline'>
+				<div className='pb-2'>
+					<p
+						className='text-blue-10 hover:text-blue-1000 text-lg cursor-pointer'
+						key={id}
+					>
+						{ques}
+					</p>
+				</div>
+			</Link>
+
+			<div className='float-right ml-2'>
+				<IconButton>
+					<DeleteOutlineIcon color='primary' onClick={() => handleDelete(id)} />
+				</IconButton>
 			</div>
 
 			<div className=''>

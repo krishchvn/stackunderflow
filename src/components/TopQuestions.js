@@ -40,7 +40,6 @@ const TopQuestions = () => {
 
 					return a < b ? -1 : a > b ? 1 : 0;
 				});
-
 			setAllQues(sortArr1);
 		} else if (val === 'ZA') {
 			setSortWay('ZA');
@@ -51,15 +50,18 @@ const TopQuestions = () => {
 
 					return a > b ? -1 : a > b ? 1 : 0;
 				});
-
 			setAllQues(sortArr1);
 		} else if (val === 'Oldest') {
 			setSortWay('Oldest');
 			sortArr1 && sortArr1.sort((a, b) => a.sortOrder - b.sortOrder);
 			setAllQues(sortArr1);
 		}
-
 		//console.log(allQues, 'allQues1');
+	};
+
+	const handleDelete = id => {
+		const newQuestions = allQues.filter(que => que.id !== id);
+		setAllQues(newQuestions);
 	};
 
 	return (
@@ -125,6 +127,7 @@ const TopQuestions = () => {
 								author={allQue.author}
 								dateTime={allQue.dateTime}
 								hashes={allQue.hashes}
+								handleDelete={handleDelete}
 							/>
 						))}
 			</div>
