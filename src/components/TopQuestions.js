@@ -29,7 +29,7 @@ const TopQuestions = () => {
 					setLoading(false);
 					//		console.log(allQues);
 				});
-		}, 200);
+		}, 1900);
 	}, []);
 
 	const sortVal = val => {
@@ -39,15 +39,13 @@ const TopQuestions = () => {
 		/* Trying to display loader while sorting change buttons */
 
 		if (val === 'Latest') {
-			setTimeout(() => {
-				setSortWay('Latest');
-				sortArr1 && sortArr1.sort((a, b) => b.sortOrder - a.sortOrder);
-				setAllQues(sortArr1);
-				setActiveLatest(true);
-				setActiveAZ(false);
-				setActiveOldest(false);
-				setActiveZA(false);
-			}, 1000);
+			setSortWay('Latest');
+			sortArr1 && sortArr1.sort((a, b) => b.sortOrder - a.sortOrder);
+			setAllQues(sortArr1);
+			setActiveLatest(true);
+			setActiveAZ(false);
+			setActiveOldest(false);
+			setActiveZA(false);
 		} else if (val === 'AZ') {
 			setSortWay('AZ');
 			sortArr1 &&
@@ -182,7 +180,7 @@ const TopQuestions = () => {
 						))}
 			</div>
 			{loading && (
-				<div className='border-gray-400 border-t border-4 rounded-full w-12 h-12 animate-spin absolute top-1/2 left-1/2'></div>
+				<div className='border-gray-400 border-t border-4 rounded-full w-10 h-10 animate-spin absolute top-1/2 left-1/2'></div>
 			)}
 		</div>
 	);

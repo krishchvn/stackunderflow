@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
+	const [searchQue, setSearchQue] = useState('');
+
 	return (
 		<nav className='flex items-center justify-between flex-wrap bg-gray-1100 py-4 lg:px-12 shadow border-solid border-t-4 border-orange-200 '>
 			<div className='flex  justify-between lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0'>
@@ -32,9 +34,8 @@ function Navbar() {
 				<div className='block lg:hidden '>
 					{/* menu svg */}
 					<button
-						/* id='menuBtn' */
 						className='flex items-center px-3 py-2 border-2 rounded text-white border-white focus:outline-none'
-						/* onClick={handleClick} */
+						onChange={e => setSearchQue(e.target.value)}
 					>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
