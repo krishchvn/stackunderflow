@@ -8,9 +8,10 @@ const AskQuestion = () => {
 	const [quesBrief, setQuesBrief] = useState('');
 	const [hashes, setHashes] = useState('');
 	const [author, setAuthor] = useState('');
+	const [code, setCode] = useState('');
 	//	const [id, setId] = useState('');
 	const [dateTime, setDateTime] = useState('');
-	let sortOrder = 23;
+	let sortOrder = 28;
 
 	const format1 = 'YYYY-MM-DD HH:mm:ss';
 
@@ -34,11 +35,12 @@ const AskQuestion = () => {
 				author: author,
 				dateTime: dateTime,
 				sortOrder: ++sortOrder,
-				date: Date().toISOString().slice(0, 10),
+				code: code,
+				//date: Date().toISOString().slice(0, 10),
 			})
 			.then(res => {
 				console.log(res.data);
-				history.push('/topquestions');
+				history.push('/');
 			})
 			.catch(err => {
 				console.log(err);
@@ -64,12 +66,22 @@ const AskQuestion = () => {
 				</div>
 				<div className='m-10'>
 					<textarea
-						className=' border border-gray-300 border-4 shadow  md:w-4/5 text-left text-sm pt-4 pb-24 px-4 focus:outline-none'
+						className=' border border-gray-300 border-4 shadow  md:w-4/5 text-left text-sm pt-4 pb-24 px-4 whitespace-pre-wrap focus:outline-none'
 						type='text'
-						placeholder='Write Question in brief (Include all the information you think is relevant, including code)'
+						placeholder='Write Question in brief (Include all the information you think is relevant)'
 						id='quesInBrief'
 						value={quesBrief}
 						onInput={e => setQuesBrief(e.target.value)}
+					/>
+				</div>
+				<div className='m-10 whitespace-pre-wrap'>
+					<textarea
+						className=' border border-gray-300 border-4 shadow  md:w-4/5 text-left text-sm pt-4 pb-24 px-4 whitespace-pre-wrap focus:outline-none'
+						type='text'
+						placeholder='Include code you think a issue lies in'
+						id='code'
+						value={code}
+						onInput={e => setCode(e.target.value)}
 					/>
 				</div>
 				<div className='m-10'>

@@ -3,8 +3,20 @@ module.exports = {
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		extend: {
+			animation: {
+				'spin-medium': 'spin 2s linear infinite',
+			},
 			spacing: {
-				'124': '7.75rem',
+				'124': '16.75rem',
+				'100': '100px',
+				'54': '13.5rem',
+				'50': '12.5rem',
+				'49': '12.25rem',
+				'51': '12.75rem',
+			},
+
+			fontSize: {
+				'2.5xl': '1.7rem',
 			},
 			colors: {
 				orange: {

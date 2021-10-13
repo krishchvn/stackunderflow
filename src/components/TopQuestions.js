@@ -4,33 +4,50 @@ import EachQuestion from './EachQuestion';
 const TopQuestions = () => {
 	const [allQues, setAllQues] = useState(null);
 	const [sortWay, setSortWay] = useState('Latest');
+	const [loading, setLoading] = useState(true);
 	//const [sortArr, setSortArr] = useState([]);
 	//const format1 = 'YYYY-MM-DD HH:mm:ss';
+	const [activeLatest, setActiveLatest] = useState(true);
+	const [activeOldest, setActiveOldest] = useState(false);
+	const [activeAZ, setActiveAZ] = useState(false);
+	const [activeZA, setActiveZA] = useState(false);
+
+	let activeCss = 'bg-gray-200';
 
 	useEffect(() => {
-		fetch('http://localhost:4000/questions')
-			.then(res => {
-				return res.json();
-			})
-			.then(data => {
-				if (sortWay === 'Latest') {
-					data.sort((a, b) => b.sortOrder - a.sortOrder);
-					//setSortWay(null);
-				}
-				setAllQues(data);
-				//		console.log(allQues);
-			});
+		setTimeout(() => {
+			fetch('http://localhost:4000/questions')
+				.then(res => {
+					return res.json();
+				})
+				.then(data => {
+					if (sortWay === 'Latest') {
+						data.sort((a, b) => b.sortOrder - a.sortOrder);
+						//setSortWay(null);
+					}
+					setAllQues(data);
+					setLoading(false);
+					//		console.log(allQues);
+				});
+		}, 200);
 	}, []);
 
 	const sortVal = val => {
 		let sortArr1 = [...allQues];
 
 		//	console.log(sortArr1, 'sortArr1');
+		/* Trying to display loader while sorting change buttons */
 
 		if (val === 'Latest') {
-			setSortWay('Latest');
-			sortArr1 && sortArr1.sort((a, b) => b.sortOrder - a.sortOrder);
-			setAllQues(sortArr1);
+			setTimeout(() => {
+				setSortWay('Latest');
+				sortArr1 && sortArr1.sort((a, b) => b.sortOrder - a.sortOrder);
+				setAllQues(sortArr1);
+				setActiveLatest(true);
+				setActiveAZ(false);
+				setActiveOldest(false);
+				setActiveZA(false);
+			}, 1000);
 		} else if (val === 'AZ') {
 			setSortWay('AZ');
 			sortArr1 &&
@@ -41,6 +58,10 @@ const TopQuestions = () => {
 					return a < b ? -1 : a > b ? 1 : 0;
 				});
 			setAllQues(sortArr1);
+			setActiveAZ(true);
+			setActiveLatest(false);
+			setActiveZA(false);
+			setActiveOldest(false);
 		} else if (val === 'ZA') {
 			setSortWay('ZA');
 			sortArr1 &&
@@ -51,28 +72,41 @@ const TopQuestions = () => {
 					return a > b ? -1 : a > b ? 1 : 0;
 				});
 			setAllQues(sortArr1);
+			setActiveZA(true);
+			setActiveOldest(false);
+			setActiveAZ(false);
+			setActiveLatest(false);
 		} else if (val === 'Oldest') {
 			setSortWay('Oldest');
 			sortArr1 && sortArr1.sort((a, b) => a.sortOrder - b.sortOrder);
 			setAllQues(sortArr1);
+			setActiveOldest(true);
+			setActiveAZ(false);
+			setActiveLatest(false);
+			setActiveZA(false);
 		}
 		//console.log(allQues, 'allQues1');
 	};
 
 	const handleDelete = id => {
-		const newQuestions = allQues.filter(que => que.id !== id);
+		let newQuestions = allQues.filter(que => que.id !== id);
 		setAllQues(newQuestions);
 	};
 
 	return (
-		<div className='mx-56 pt-16 border-l-2'>
-			<div className='px-4'>
+		<div className='w-5/6 float-right border-l-2 p-2 pt-16 '>
+			<div className='px-4 w-3/4'>
 				<div className='flex justify-between'>
 					<div className=''>
 						<h1 className='text-3xl text-left mb-6 '>Top Questions</h1>
 					</div>
 					<div className='flex mb-6'>
-						<div className=' transition duration-300 ease-out border-2 border-r-0 border-gray-1050 px-2 py-1 hover:bg-gray-200 '>
+						<div
+							className={
+								' transition duration-300 ease-out border-2 border-r-0 border-gray-1050 px-2 py-1 hover:bg-gray-200' +
+								(activeLatest ? ' bg-gray-200' : '')
+							}
+						>
 							<button
 								onClick={() => {
 									sortVal('Latest');
@@ -82,7 +116,12 @@ const TopQuestions = () => {
 								Latest
 							</button>
 						</div>
-						<div className=' transition duration-300 ease-out border-2 border-r-0 border-gray-1050 px-2 py-1 hover:bg-gray-200'>
+						<div
+							className={
+								' transition duration-300 ease-out border-2 border-r-0 border-gray-1050 px-2 py-1 hover:bg-gray-200' +
+								(activeAZ ? ' bg-gray-200' : '')
+							}
+						>
 							<button
 								onClick={() => {
 									sortVal('AZ');
@@ -92,7 +131,12 @@ const TopQuestions = () => {
 								A-Z
 							</button>
 						</div>
-						<div className=' transition duration-300 ease-out border-2 border-r-0 border-gray-1050 px-2 py-1 hover:bg-gray-200 '>
+						<div
+							className={
+								' transition duration-300 ease-out border-2 border-r-0 border-gray-1050 px-2 py-1 hover:bg-gray-200' +
+								(activeZA ? ' bg-gray-200' : '')
+							}
+						>
 							<button
 								onClick={() => {
 									sortVal('ZA');
@@ -103,7 +147,12 @@ const TopQuestions = () => {
 								Z-A
 							</button>
 						</div>
-						<div className=' transition duration-300 ease-out border-2 border-gray-1050 px-2 py-1 hover:bg-gray-200 '>
+						<div
+							className={
+								' transition duration-300 ease-out border-2 border-r-1 border-gray-1050 px-2 py-1 hover:bg-gray-200' +
+								(activeOldest ? ' bg-gray-200' : '')
+							}
+						>
 							<button
 								onClick={() => {
 									sortVal('Oldest');
@@ -128,9 +177,13 @@ const TopQuestions = () => {
 								dateTime={allQue.dateTime}
 								hashes={allQue.hashes}
 								handleDelete={handleDelete}
+								code={allQue.code}
 							/>
 						))}
 			</div>
+			{loading && (
+				<div className='border-gray-400 border-t border-4 rounded-full w-12 h-12 animate-spin absolute top-1/2 left-1/2'></div>
+			)}
 		</div>
 	);
 };

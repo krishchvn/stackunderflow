@@ -2,6 +2,8 @@ import React from 'react';
 import ReactTimeAgo from 'react-time-ago';
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
 import IconButton from '@material-ui/core/IconButton';
+import axios from 'axios';
+
 import { Link } from 'react-router-dom';
 
 const EachQuestion = ({
@@ -11,6 +13,7 @@ const EachQuestion = ({
 	author,
 	dateTime,
 	hashes,
+	code,
 	handleDelete,
 }) => {
 	var lettersAllowed = /^[0-9A-Za-z#]+$/;
@@ -27,8 +30,7 @@ const EachQuestion = ({
 					</p>
 				</div>
 			</Link>
-
-			<div className='float-right ml-2'>
+			<div className='float-right mb-1'>
 				<IconButton>
 					<DeleteOutlineIcon color='primary' onClick={() => handleDelete(id)} />
 				</IconButton>
