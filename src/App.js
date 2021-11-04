@@ -17,7 +17,6 @@ function App() {
 		<Router>
 			<div className='App'>
 				<Navbar />
-
 				<Switch>
 					<Route exact path='/'>
 						<TopQuestions />

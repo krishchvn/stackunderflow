@@ -1,8 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+//import SearchContext from '../context/SearchContextProvider';
 
 function Navbar() {
-	const [searchQue, setSearchQue] = useState('');
+	const [searchTerm, setSearchTerm] = useState('');
+	/* const searchContext = useContext(SearchContext); */
+	const [toggle, setToggle] = useState(true);
+
+	const searchTermHandler = e => {
+		e.preventDefault();
+
+		/* console.log('here', searchTerm);
+		searchContext?.searchHandler(searchTerm); */
+	};
+
+	const onToggle = e => {
+		e.preventDefault();
+		setToggle(!toggle);
+	};
 
 	return (
 		<nav className='flex items-center justify-between flex-wrap bg-gray-1100 py-4 lg:px-12 shadow border-solid border-t-4 border-orange-200 '>
@@ -34,8 +49,8 @@ function Navbar() {
 				<div className='block lg:hidden '>
 					{/* menu svg */}
 					<button
+						onClick={onToggle}
 						className='flex items-center px-3 py-2 border-2 rounded text-white border-white focus:outline-none'
-						onChange={e => setSearchQue(e.target.value)}
 					>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -57,40 +72,48 @@ function Navbar() {
 			</div>
 
 			<div
-				/* 	id='menu' */
 				className={
-					/* 	`${hide}` + */
-					'w-full flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8'
+					toggle
+						? 'w-full flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8'
+						: 'invisible'
 				}
 			>
-				{/* search svg */}
 				<div className='relative mx-20 top-0 text-gray-800 lg:block lg:w-3/5 lg:-mt-4'>
-					<input
-						className=' bg-white h-10 w-full  pl-2 pr-8 rounded-lg border border-2 shadow-sm placeholder-gray-400 text-sm focus:outline-none sm: mt-4'
-						type='search'
-						name='search'
-						placeholder='Search a Question'
-					/>
-					<button type='submit' className='absolute right-0 top-0 mt-3 mr-2'>
-						<svg
-							className='text-white h-4 w-4 fill-current  sm: mt-4'
-							xmlns='http://www.w3.org/2000/svg'
-							version='1.1'
-							id='Capa_1'
-							x='0px'
-							y='0px'
-							viewBox='0 0 56.966 56.966'
-							style={{
-								enableBackground: 'new 0 0 56.966 56.966',
-								stroke: 'gray',
-							}}
-							/* 	xml:space='preserve' */
-							width='512px'
-							height='512px'
+					<form onSubmit={searchTermHandler}>
+						<input
+							className=' bg-white h-10 w-full  pl-2 pr-8 rounded-lg border border-2 shadow-sm placeholder-gray-400 text-sm focus:outline-none sm: mt-4'
+							type='search'
+							name='search'
+							placeholder='Search a Question'
+							value={searchTerm}
+							onChange={e => setSearchTerm(e.target.value)}
+						/>
+
+						<button
+							onClick={searchTermHandler}
+							type='submit'
+							className='absolute right-0 top-0 mt-3 mr-2'
 						>
-							<path d='M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z' />
-						</svg>
-					</button>
+							<svg
+								className='text-white h-4 w-4 fill-current  sm: mt-4'
+								xmlns='http://www.w3.org/2000/svg'
+								version='1.1'
+								id='Capa_1'
+								x='0px'
+								y='0px'
+								viewBox='0 0 56.966 56.966'
+								style={{
+									enableBackground: 'new 0 0 56.966 56.966',
+									stroke: 'gray',
+								}}
+								/* 	xml:space='preserve' */
+								width='512px'
+								height='512px'
+							>
+								<path d='M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z' />
+							</svg>
+						</button>
+					</form>
 				</div>
 				<div className='lg:absolute lg:top -0 lg:right-0 flex text-center justify-center lg:mr-4	 '>
 					<Link

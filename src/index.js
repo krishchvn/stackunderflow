@@ -6,13 +6,16 @@ import reportWebVitals from './reportWebVitals';
 import TimeAgo from 'javascript-time-ago';
 import en from 'javascript-time-ago/locale/en';
 import ru from 'javascript-time-ago/locale/ru';
+import SearchContextProvider from './context/SearchContextProvider';
 
 TimeAgo.addDefaultLocale(en);
 TimeAgo.addLocale(ru);
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<SearchContextProvider>
+			<App />
+		</SearchContextProvider>
 	</React.StrictMode>,
 	document.getElementById('root')
 );

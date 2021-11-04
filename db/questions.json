@@ -1,289 +1,338 @@
 {
-  "questions": [
-    {
-      "id": "1",
-      "ques": "Where is my code?",
-      "quesBrief": "I can't seem to find it.",
-      "hashes": "#javascript , #goodlord",
-      "author": "me",
-      "dateTime": "2021-09-22 18:13:01",
-      "date": "2021-09-22",
-      "sortOrder": -100,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
-    },
-    {
-      "id": "2",
-      "ques": "here is my second code ?",
-      "quesBrief": "I can't seem to find it too.",
-      "hashes": "#javascript , #goodlord",
-      "author": "slowdeathv123",
-      "dateTime": "2021-09-22 18:13:12",
-      "date": "2021-09-22",
-      "sortOrder": -99,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
-    },
-    {
-      "ques": "What is tag in html?",
-      "quesBrief": "I can't seem to run tag and render it on screen.",
-      "hashes": "#html, #css",
-      "author": "andrew",
-      "dateTime": "2021-09-24 13:25:54",
-      "date": "2021-09-24",
-      "id": "RCYFA0g",
-      "sortOrder": -98,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
-    },
-    {
-      "ques": "How does the universe work altogether?",
-      "quesBrief": "I read a book by Neil DeGrasse Tyson and it got really interesting but also difficult.",
-      "hashes": "#universe #neildegrassetyson",
-      "author": "Neil DeGrasse Tyson Jr.",
-      "dateTime": "2021-09-25 15:19:21",
-      "date": "2021-09-25",
-      "id": "Njhz9Fp",
-      "sortOrder": -97,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
-    },
-    {
-      "ques": "How does the universe work altogether but yet so differently?",
-      "quesBrief": "nope",
-      "hashes": "#universe #neil",
-      "author": "Neil DeGrasse Tyson Jr.",
-      "dateTime": "",
-      "date": "2021-09-26",
-      "id": "vCjwZ0M",
-      "sortOrder": -96,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
-    },
-    {
-      "ques": "How does the universe work altogether but yet so differently?",
-      "quesBrief": "nope",
-      "hashes": "#universe #neil",
-      "author": "Neil DeGrasse Tyson Jr.",
-      "dateTime": "2021-09-25 15:21:19",
-      "date": "2021-09-26",
-      "id": "jKvujTB",
-      "sortOrder": -95,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
-    },
-    {
-      "ques": "What is tag in html?",
-      "quesBrief": "sfc",
-      "hashes": "#ds #htm",
-      "author": "Me2",
-      "dateTime": "2021-09-25 15:54:06",
-      "date": "2021-09-25",
-      "id": "oh-mlKt",
-      "sortOrder": -94,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
-    },
-    {
-      "ques": "I am specific and asking to the point",
-      "quesBrief": "sdfsnsa",
-      "hashes": "sfgfsd",
-      "author": "Neil DeGrasse Tyson Jr.",
-      "dateTime": "",
-      "date": "2021-09-26",
-      "id": "JWFMtkE",
-      "sortOrder": -93,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
-    },
-    {
-      "ques": "I am specific and asking to the point",
-      "quesBrief": "sdfsnsa",
-      "hashes": "sfgfsd",
-      "author": "Neil DeGrasse Tyson Jr.",
-      "dateTime": "2021-09-25 17:16:40",
-      "date": "2021-09-25",
-      "id": "ECfjd`p`9",
-      "sortOrder": -87,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
-    },
-    {
-      "ques": "I am specific and asking to the point",
-      "quesBrief": "sdfsnsa",
-      "hashes": "#sdad #dsjf #jcnksvd #dsnckjvd #hhfsd",
-      "author": "Neil DeGrasse Tyson Jr.",
-      "dateTime": "2021-09-25 17:16:44",
-      "date": "2021-09-25",
-      "id": "dTpR0KF",
-      "sortOrder": -89,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
-    },
-    {
-      "ques": "hey what do you do",
-      "quesBrief": "dsx",
-      "hashes": "foo bar",
-      "author": "me",
-      "dateTime": "2021-09-26 13:02:17",
-      "date": "2021-09-25",
-      "id": "5aP8Sdr",
-      "sortOrder": -90,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
-    },
-    {
-      "ques": "What is tag2  in html?",
-      "quesBrief": "tage2",
-      "hashes": "#er #tag",
-      "author": "ds",
-      "dateTime": "2021-09-26 13:12:37",
-      "date": "2021-09-26",
-      "id": "_mq66y2",
-      "sortOrder": -86,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
-    },
-    {
-      "ques": "hey what do you do",
-      "quesBrief": "nothing",
-      "hashes": "#noting #whatelse",
-      "author": "Me",
-      "dateTime": "2021-09-26 13:32:21",
-      "date": "2021-09-26",
-      "id": "BWQQ6Hl",
-      "sortOrder": -85,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
-    },
-    {
-      "ques": "How does the universe work altogether same?",
-      "quesBrief": "i dont know",
-      "hashes": "#universe",
-      "author": "Neil DeGrasse Tyson Jr.",
-      "dateTime": "2021-09-26 13:32:51",
-      "date": "2021-09-26",
-      "id": "MmxP3-I",
-      "sortOrder": -12,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
-    },
-    {
-      "ques": "What is geometry in html?",
-      "quesBrief": "nothing new",
-      "hashes": "#geometry #html",
-      "author": "coder bro",
-      "dateTime": "2021-09-26 13:33:36",
-      "date": "2021-09-26",
-      "id": "63PUnVI",
-      "sortOrder": -11,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
-    },
-    {
-      "ques": "hey what do you do",
-      "quesBrief": "",
-      "hashes": "do vape",
-      "author": "me",
-      "dateTime": "2021-09-26 13:35:40",
-      "date": "2021-09-26",
-      "id": "Lg7YHNa",
-      "sortOrder": -9,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
-    },
-    {
-      "ques": "I am specific and asking to the point, am i?",
-      "quesBrief": "not sure",
-      "hashes": "#sure #confident",
-      "author": "me",
-      "dateTime": "2021-09-26 13:37:52",
-      "date": "2021-09-26",
-      "id": "euygIVK",
-      "sortOrder": -18,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
-    },
-    {
-      "ques": "hey what do you do again and again??",
-      "quesBrief": "",
-      "hashes": "#again, #do",
-      "author": "tommy shelby",
-      "dateTime": "2021-09-26 13:39:00",
-      "date": "2021-09-26",
-      "id": "5d8WsbG",
-      "sortOrder": -8,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
-    },
-    {
-      "ques": "hey what do you do with me?",
-      "quesBrief": "coudld",
-      "hashes": "#bore , #cuddle",
-      "author": "grace shelby",
-      "dateTime": "2021-09-26 13:39:43",
-      "date": "2021-09-26",
-      "id": "9F37FAt",
-      "sortOrder": -7,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
-    },
-    {
-      "ques": "what is cout in c++?",
-      "quesBrief": "lorem ipsum",
-      "hashes": "c++, cout   cpp   #cpp",
-      "author": "dwayne johnson",
-      "dateTime": "2021-09-26 15:44:42",
-      "date": "2021-09-26",
-      "id": "6xkAJJJ",
-      "sortOrder": -6,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
-    },
-    {
-      "ques": "What is tag in css?",
-      "quesBrief": "css",
-      "hashes": "#css tag div",
-      "author": "safarar fun",
-      "dateTime": "2021-10-03 17:23:03",
-      "date": "2021-10-03",
-      "sortOrder": -4,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go",
-      "id": "KajD7rO"
-    },
-    {
-      "id": "SEXRl5u"
-    },
-    {
-      "id": "ZU-bUxu"
-    },
-    {
-      "id": "9o9HEnm"
-    },
-    {
-      "id": "nDGJuoP"
-    },
-    {
-      "id": "kn978wk"
-    },
-    {
-      "id": "ey1mS5B"
-    },
-    {
-      "ques": "React Js conditionally applying class attributes",
-      "quesBrief": "I want to conditionally show and hide this button group depending on what is passed in from the parent component which looks like this:\n\n<TopicNav showBulkActions={this.__hasMultipleSelected} />\n....\n\n__hasMultipleSelected: function() {\n  return false; //return true or false depending on data\n}\n....\n\nvar TopicNav = React.createClass({\nrender: function() {\nreturn (\n    <div className=\"row\">\n        <div className=\"col-lg-6\">\n            <div className=\"btn-group pull-right {this.props.showBulkActions ? 'show' : 'hidden'}\">\n                <button type=\"button\" className=\"btn btn-default dropdown-toggle\" data-toggle=\"dropdown\" aria-expanded=\"false\">\n                  Bulk Actions <span className=\"caret\"></span>\n                </button>\n                <ul className=\"dropdown-menu\" role=\"menu\">\n                  <li><a href=\"#\">Merge into New Session</a></li>\n                  <li><a href=\"#\">Add to Existing Session</a></li>\n                  <li className=\"divider\"></li>\n                  <li><a href=\"#\">Delete</a></li>\n                </ul>\n            </div>\n        </div>\n    </div>\n    );\n  }\n});\nNothing is happening however, with the {this.props.showBulkActions ? 'show' : 'hidden'}. Am I doing anything wrong here?",
-      "hashes": "javascript css twitter-bootstrap-3 reactjs class-attributes",
-      "author": "krishna chavan",
-      "dateTime": "2021-10-08 16:00:30",
-      "sortOrder": -3,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go",
-      "id": "p5rRqpg"
-    },
-    {
-      "ques": "The curly braces are inside the string, so it is being evaluated as string.",
-      "quesBrief": "Avatar googleId=\"118096717852922241760\" size=\"100\" round={true} />\n<Avatar facebookId=\"100008343750912\" size=\"150\" />\n<Avatar githubHandle=\"sitebase\" size={150} round=\"20px\" />\n<Avatar vkontakteId=\"1\" size=\"150\" />\n<Avatar skypeId=\"sitebase\" size=\"200\" />\n<Avatar twitterHandle=\"sitebase\" size=\"40\" />\n<Avatar name=\"Wim Mostmans\" size=\"150\" />\n<Avatar name=\"Wim Mostmans\" size=\"150\" textSizeRatio={1.75} />\n<Avatar value=\"86%\" size=\"40\" />\n<Avatar size=\"100\" facebook-id=\"invalidfacebookusername\" src=\"http://www.gravatar.com/avatar/a16a38cdfe8b2cbd38e8a56ab93238d3\" />\n<Avatar name=\"Wim Mostmans\" unstyled=\"true\" />",
-      "hashes": "avatar react-avatar react",
-      "author": "tyler the creator",
-      "dateTime": "2021-10-08 16:06:27",
-      "sortOrder": -1,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go",
-      "id": "tS0VJp8"
-    },
-    {
-      "ques": "Material UI Avatar component sizes not changing",
-      "quesBrief": "I have this component\n\nimport React, { FC } from \"react\";\nimport { Avatar } from \"@material-ui/core\";\n\nexport interface AvatarProps {\n  alt?: string;\n  src: string;\n  variant?: \"circle\" | \"rounded\" | \"square\";\n  sizes?: string;\n}\n\nconst Component: FC<AvatarProps> = (props: AvatarProps): JSX.Element => {\n  return <Avatar {...props}></Avatar>;\n};\n\nexport default Component;\nI am trying to set the sizes property but it is not changing. What exactly does it take value?",
-      "hashes": "reactjs materialUi",
-      "author": "jordan peterson",
-      "dateTime": "2021-10-09 13:41:27",
-      "sortOrder": 0,
-      "code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go",
-      "id": "rkw8y1g"
-    },
-    {
-      "id": "z-oHOji"
-    },
-    {
-      "id": "SSyiz9j"
-    }
-  ]
+	"questions": [
+		{
+			"id": "2",
+			"ques": "here is my second code ?",
+			"quesBrief": "I can't seem to find it too.",
+			"hashes": "#javascript , #goodlord",
+			"author": "slowdeathv123",
+			"dateTime": "2021-09-22 18:13:12",
+			"date": "2021-09-22",
+			"sortOrder": -99,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
+		},
+		{
+			"ques": "What is tag in html?",
+			"quesBrief": "I can't seem to run tag and render it on screen.",
+			"hashes": "#html, #css",
+			"author": "andrew",
+			"dateTime": "2021-09-24 13:25:54",
+			"date": "2021-09-24",
+			"id": "RCYFA0g",
+			"sortOrder": -98,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
+		},
+		{
+			"ques": "How does the universe work altogether?",
+			"quesBrief": "I read a book by Neil DeGrasse Tyson and it got really interesting but also difficult.",
+			"hashes": "#universe #neildegrassetyson",
+			"author": "Neil DeGrasse Tyson Jr.",
+			"dateTime": "2021-09-25 15:19:21",
+			"date": "2021-09-25",
+			"id": "Njhz9Fp",
+			"sortOrder": -97,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
+		},
+		{
+			"ques": "How does the universe work altogether but yet so differently?",
+			"quesBrief": "nope",
+			"hashes": "#universe #neil",
+			"author": "Neil DeGrasse Tyson Jr.",
+			"dateTime": "",
+			"date": "2021-09-26",
+			"id": "vCjwZ0M",
+			"sortOrder": -96,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
+		},
+		{
+			"ques": "How does the universe work altogether but yet so differently?",
+			"quesBrief": "nope",
+			"hashes": "#universe #neil",
+			"author": "Neil DeGrasse Tyson Jr.",
+			"dateTime": "2021-09-25 15:21:19",
+			"date": "2021-09-26",
+			"id": "jKvujTB",
+			"sortOrder": -95,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
+		},
+		{
+			"ques": "What is tag in html?",
+			"quesBrief": "sfc",
+			"hashes": "#ds #htm",
+			"author": "Me2",
+			"dateTime": "2021-09-25 15:54:06",
+			"date": "2021-09-25",
+			"id": "oh-mlKt",
+			"sortOrder": -94,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
+		},
+		{
+			"ques": "I am specific and asking to the point",
+			"quesBrief": "sdfsnsa",
+			"hashes": "sfgfsd",
+			"author": "Neil DeGrasse Tyson Jr.",
+			"dateTime": "",
+			"date": "2021-09-26",
+			"id": "JWFMtkE",
+			"sortOrder": -93,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
+		},
+		{
+			"ques": "I am specific and asking to the point",
+			"quesBrief": "sdfsnsa",
+			"hashes": "sfgfsd",
+			"author": "Neil DeGrasse Tyson Jr.",
+			"dateTime": "2021-09-25 17:16:40",
+			"date": "2021-09-25",
+			"id": "ECfjd`p`9",
+			"sortOrder": -87,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
+		},
+		{
+			"ques": "I am specific and asking to the point",
+			"quesBrief": "sdfsnsa",
+			"hashes": "#sdad #dsjf #jcnksvd #dsnckjvd #hhfsd",
+			"author": "Neil DeGrasse Tyson Jr.",
+			"dateTime": "2021-09-25 17:16:44",
+			"date": "2021-09-25",
+			"id": "dTpR0KF",
+			"sortOrder": -89,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
+		},
+		{
+			"ques": "hey what do you do",
+			"quesBrief": "dsx",
+			"hashes": "foo bar",
+			"author": "me",
+			"dateTime": "2021-09-26 13:02:17",
+			"date": "2021-09-25",
+			"id": "5aP8Sdr",
+			"sortOrder": -90,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
+		},
+		{
+			"ques": "What is tag2  in html?",
+			"quesBrief": "tage2",
+			"hashes": "#er #tag",
+			"author": "ds",
+			"dateTime": "2021-09-26 13:12:37",
+			"date": "2021-09-26",
+			"id": "_mq66y2",
+			"sortOrder": -86,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
+		},
+		{
+			"ques": "hey what do you do",
+			"quesBrief": "nothing",
+			"hashes": "#noting #whatelse",
+			"author": "Me",
+			"dateTime": "2021-09-26 13:32:21",
+			"date": "2021-09-26",
+			"id": "BWQQ6Hl",
+			"sortOrder": -85,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
+		},
+		{
+			"ques": "How does the universe work altogether same?",
+			"quesBrief": "i dont know",
+			"hashes": "#universe",
+			"author": "Neil DeGrasse Tyson Jr.",
+			"dateTime": "2021-09-26 13:32:51",
+			"date": "2021-09-26",
+			"id": "MmxP3-I",
+			"sortOrder": -12,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
+		},
+		{
+			"ques": "What is geometry in html?",
+			"quesBrief": "nothing new",
+			"hashes": "#geometry #html",
+			"author": "coder bro",
+			"dateTime": "2021-09-26 13:33:36",
+			"date": "2021-09-26",
+			"id": "63PUnVI",
+			"sortOrder": -11,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
+		},
+		{
+			"ques": "hey what do you do",
+			"quesBrief": "",
+			"hashes": "do vape",
+			"author": "me",
+			"dateTime": "2021-09-26 13:35:40",
+			"date": "2021-09-26",
+			"id": "Lg7YHNa",
+			"sortOrder": -9,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
+		},
+		{
+			"ques": "I am specific and asking to the point, am i?",
+			"quesBrief": "not sure",
+			"hashes": "#sure #confident",
+			"author": "me",
+			"dateTime": "2021-09-26 13:37:52",
+			"date": "2021-09-26",
+			"id": "euygIVK",
+			"sortOrder": -18,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
+		},
+		{
+			"ques": "hey what do you do again and again??",
+			"quesBrief": "",
+			"hashes": "#again, #do",
+			"author": "tommy shelby",
+			"dateTime": "2021-09-26 13:39:00",
+			"date": "2021-09-26",
+			"id": "5d8WsbG",
+			"sortOrder": -8,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
+		},
+		{
+			"ques": "hey what do you do with me?",
+			"quesBrief": "coudld",
+			"hashes": "#bore , #cuddle",
+			"author": "grace shelby",
+			"dateTime": "2021-09-26 13:39:43",
+			"date": "2021-09-26",
+			"id": "9F37FAt",
+			"sortOrder": -7,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
+		},
+		{
+			"ques": "what is cout in c++?",
+			"quesBrief": "lorem ipsum",
+			"hashes": "c++, cout   cpp   #cpp",
+			"author": "dwayne johnson",
+			"dateTime": "2021-09-26 15:44:42",
+			"date": "2021-09-26",
+			"id": "6xkAJJJ",
+			"sortOrder": -6,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go"
+		},
+		{
+			"ques": "What is tag in css?",
+			"quesBrief": "css",
+			"hashes": "#css tag div",
+			"author": "safarar fun",
+			"dateTime": "2021-10-03 17:23:03",
+			"date": "2021-10-03",
+			"sortOrder": -4,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go",
+			"id": "KajD7rO"
+		},
+		{
+			"id": "SEXRl5u"
+		},
+		{
+			"id": "ZU-bUxu"
+		},
+		{
+			"id": "9o9HEnm"
+		},
+		{
+			"id": "nDGJuoP"
+		},
+		{
+			"id": "kn978wk"
+		},
+		{
+			"id": "ey1mS5B"
+		},
+		{
+			"ques": "React Js conditionally applying class attributes",
+			"quesBrief": "I want to conditionally show and hide this button group depending on what is passed in from the parent component which looks like this:\n\n<TopicNav showBulkActions={this.__hasMultipleSelected} />\n....\n\n__hasMultipleSelected: function() {\n  return false; //return true or false depending on data\n}\n....\n\nvar TopicNav = React.createClass({\nrender: function() {\nreturn (\n    <div className=\"row\">\n        <div className=\"col-lg-6\">\n            <div className=\"btn-group pull-right {this.props.showBulkActions ? 'show' : 'hidden'}\">\n                <button type=\"button\" className=\"btn btn-default dropdown-toggle\" data-toggle=\"dropdown\" aria-expanded=\"false\">\n                  Bulk Actions <span className=\"caret\"></span>\n                </button>\n                <ul className=\"dropdown-menu\" role=\"menu\">\n                  <li><a href=\"#\">Merge into New Session</a></li>\n                  <li><a href=\"#\">Add to Existing Session</a></li>\n                  <li className=\"divider\"></li>\n                  <li><a href=\"#\">Delete</a></li>\n                </ul>\n            </div>\n        </div>\n    </div>\n    );\n  }\n});\nNothing is happening however, with the {this.props.showBulkActions ? 'show' : 'hidden'}. Am I doing anything wrong here?",
+			"hashes": "javascript css twitter-bootstrap-3 reactjs class-attributes",
+			"author": "krishna chavan",
+			"dateTime": "2021-10-08 16:00:30",
+			"sortOrder": -3,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go",
+			"id": "p5rRqpg"
+		},
+		{
+			"ques": "The curly braces are inside the string, so it is being evaluated as string.",
+			"quesBrief": "Avatar googleId=\"118096717852922241760\" size=\"100\" round={true} />\n<Avatar facebookId=\"100008343750912\" size=\"150\" />\n<Avatar githubHandle=\"sitebase\" size={150} round=\"20px\" />\n<Avatar vkontakteId=\"1\" size=\"150\" />\n<Avatar skypeId=\"sitebase\" size=\"200\" />\n<Avatar twitterHandle=\"sitebase\" size=\"40\" />\n<Avatar name=\"Wim Mostmans\" size=\"150\" />\n<Avatar name=\"Wim Mostmans\" size=\"150\" textSizeRatio={1.75} />\n<Avatar value=\"86%\" size=\"40\" />\n<Avatar size=\"100\" facebook-id=\"invalidfacebookusername\" src=\"http://www.gravatar.com/avatar/a16a38cdfe8b2cbd38e8a56ab93238d3\" />\n<Avatar name=\"Wim Mostmans\" unstyled=\"true\" />",
+			"hashes": "avatar react-avatar react",
+			"author": "tyler the creator",
+			"dateTime": "2021-10-08 16:06:27",
+			"sortOrder": -1,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go",
+			"id": "tS0VJp8"
+		},
+		{
+			"ques": "Material UI Avatar component sizes not changing",
+			"quesBrief": "I have this component\n\nimport React, { FC } from \"react\";\nimport { Avatar } from \"@material-ui/core\";\n\nexport interface AvatarProps {\n  alt?: string;\n  src: string;\n  variant?: \"circle\" | \"rounded\" | \"square\";\n  sizes?: string;\n}\n\nconst Component: FC<AvatarProps> = (props: AvatarProps): JSX.Element => {\n  return <Avatar {...props}></Avatar>;\n};\n\nexport default Component;\nI am trying to set the sizes property but it is not changing. What exactly does it take value?",
+			"hashes": "reactjs materialUi",
+			"author": "jordan peterson",
+			"dateTime": "2021-10-09 13:41:27",
+			"sortOrder": 0,
+			"code": " - utlis (folder contains GO files)\n  ---sendMail.go \n--templates (folder)\n --- reset_code.html\n - main.go",
+			"id": "rkw8y1g"
+		},
+		{
+			"id": "z-oHOji"
+		},
+		{
+			"id": "SSyiz9j"
+		},
+		{
+			"id": "OrR-3vP"
+		},
+		{
+			"id": "6ATVsOh"
+		},
+		{
+			"id": "YntTbeX"
+		},
+		{
+			"id": "xQZScvw"
+		},
+		{
+			"id": "UBWc5LG"
+		},
+		{
+			"id": "sfRfwH4"
+		},
+		{
+			"id": "48rXNQ1"
+		},
+		{
+			"id": "wBe9xsP"
+		},
+		{
+			"id": "Ov7_sge"
+		},
+		{
+			"id": "uR2p_nN"
+		},
+		{
+			"id": "8nIlU3c"
+		},
+		{
+			"id": "f-cT_BH"
+		},
+		{
+			"id": "NZQoRZV"
+		},
+		{
+			"id": "KJ9B2jg"
+		},
+		{
+			"id": "NH7gymG"
+		},
+		{
+			"id": "hqAXExv"
+		},
+		{
+			"id": "YOd0Lzp"
+		},
+		{
+			"id": "sc49cli"
+		},
+		{
+			"id": "dDljVHd"
+		},
+		{
+			"id": "uihz6wg"
+		}
+	]
 }

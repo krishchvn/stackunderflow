@@ -2,8 +2,6 @@ import React from 'react';
 import ReactTimeAgo from 'react-time-ago';
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
 import IconButton from '@material-ui/core/IconButton';
-import axios from 'axios';
-
 import { Link } from 'react-router-dom';
 
 const EachQuestion = ({
@@ -19,25 +17,22 @@ const EachQuestion = ({
 	var lettersAllowed = /^[0-9A-Za-z#]+$/;
 
 	return (
-		<div className='py-5 px-5 pb-16 mb-2 bg-gray-1100 border border-2 rounded-lg shadow-md'>
+		<div className='  py-5 px-5 pb-16 mb-2 bg-gray-1100 border border-2 rounded-lg shadow-md'>
 			<Link to={`/question/_id=${id}`} className='hover:no-underline'>
 				<div className='pb-2'>
-					<p
-						className='text-blue-10 hover:text-blue-1000 text-lg cursor-pointer'
-						key={id}
-					>
+					<p className='text-blue-10 hover:text-blue-1000 text-md md:text-md cursor-pointer'>
 						{ques}
 					</p>
 				</div>
 			</Link>
-			<div className='float-right mb-1'>
+			<div className='float-right'>
 				<IconButton>
 					<DeleteOutlineIcon color='primary' onClick={() => handleDelete(id)} />
 				</IconButton>
 			</div>
 
-			<div className=''>
-				<div className='flex float-left'>
+			<div className='text-sm md:text-md' key={id}>
+				<div className='flex flex-row float-left'>
 					{hashes.split(' ').map(hash =>
 						hash.match(lettersAllowed) ? (
 							hash[0] === '#' ? (
@@ -58,7 +53,7 @@ const EachQuestion = ({
 						)
 					)}
 				</div>
-				<div className='flex float-right'>
+				<div className='flex float-left sm:float-right'>
 					<div className='bg-gray-100 py-2 px-4 rounded-full transform transition duration-300 hover:scale-105'>
 						<span className='text-gray-400 hover:text-gray-700' key={id}>
 							{author}
