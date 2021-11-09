@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
-//import { SearchContext } from '../context/SearchContextProvider';
 import EachQuestion from './EachQuestion';
+import { SearchContext } from '../context/SearchContext';
 
 const TopQuestions = () => {
 	const [allQues, setAllQues] = useState(null);
@@ -14,9 +14,7 @@ const TopQuestions = () => {
 	const [activeZA, setActiveZA] = useState(false);
 	const [filterHash, setFilterHash] = useState('');
 	const [noResult, setNoResult] = useState(false);
-
-	//	const searchContext = useContext(SearchContext);
-	//console.log('123', searchContext);
+	const [term] = useContext(SearchContext);
 
 	useEffect(() => {
 		setTimeout(() => {
@@ -36,8 +34,6 @@ const TopQuestions = () => {
 				});
 		}, 300);
 	}, [filterHash]);
-
-	//console.log('term1', searchContext.term);
 
 	const sortVal = val => {
 		let sortArr1 = [...allQues];
@@ -206,6 +202,10 @@ const TopQuestions = () => {
 									(allQue.ques, allQue.author, allQue.dateTime) &&
 									(filterHash === '' ||
 									allQue.hashes.toLowerCase().includes(filterHash.toLowerCase())
+										? allQue
+										: '') &&
+									(term === '' ||
+									allQue.ques.toLowerCase().includes(term.toLowerCase())
 										? allQue
 										: '')
 							)

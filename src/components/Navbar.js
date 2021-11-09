@@ -1,17 +1,15 @@
-import React, { useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
-//import SearchContext from '../context/SearchContextProvider';
+import { SearchContext } from '../context/SearchContext';
 
 function Navbar() {
 	const [searchTerm, setSearchTerm] = useState('');
-	/* const searchContext = useContext(SearchContext); */
 	const [toggle, setToggle] = useState(true);
+	const [term, setTerm] = useContext(SearchContext);
 
 	const searchTermHandler = e => {
-		e.preventDefault();
-
-		/* console.log('here', searchTerm);
-		searchContext?.searchHandler(searchTerm); */
+		setTerm(e.target.value);
+		//	console.log(term, 'term in nav');
 	};
 
 	const onToggle = e => {
@@ -46,7 +44,7 @@ function Navbar() {
 						</Link>
 					</span>
 				</div>
-				<div className='block lg:hidden '>
+				<div className='block md:hidden '>
 					{/* menu svg */}
 					<button
 						onClick={onToggle}
@@ -75,7 +73,7 @@ function Navbar() {
 				className={
 					toggle
 						? 'w-full flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8'
-						: 'invisible'
+						: 'invisible md:w-full md:flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 md:px-8 md:visible'
 				}
 			>
 				<div className='relative mx-20 top-0 text-gray-800 lg:block lg:w-3/5 lg:-mt-4'>
@@ -85,8 +83,8 @@ function Navbar() {
 							type='search'
 							name='search'
 							placeholder='Search a Question'
-							value={searchTerm}
-							onChange={e => setSearchTerm(e.target.value)}
+							value={term}
+							onChange={searchTermHandler}
 						/>
 
 						<button

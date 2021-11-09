@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import TimeAgo from 'javascript-time-ago';
 import en from 'javascript-time-ago/locale/en';
 import ru from 'javascript-time-ago/locale/ru';
-import SearchContextProvider from './context/SearchContextProvider';
+import { SearchContextProvider } from './context/SearchContext';
 
 TimeAgo.addDefaultLocale(en);
 TimeAgo.addLocale(ru);
