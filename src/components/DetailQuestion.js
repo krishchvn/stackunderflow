@@ -2,21 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactTimeAgo from 'react-time-ago';
 import Avatar from 'react-avatar';
-//import axios from 'axios';
-import moment from 'moment';
 import { useHistory } from 'react-router-dom';
 
 const DetailQuestion = () => {
 	const [question, setQuestion] = useState(null);
 	const { id } = useParams();
 	var lettersAllowed = /^[0-9A-Za-z#]+$/;
-	//const history = useHistory();
-	const format1 = 'YYYY-MM-DD HH:mm:ss';
+	const history = useHistory();
 
-	const [ansBrief, setAnsBrief] = useState('');
-	const [ansCode, setAnsCode] = useState('');
-	const [ansBy, setAnsBy] = useState('');
-	const [ansTime, setAnsTime] = useState('');
 	const [loading, setLoading] = useState(true);
 
 	const abortCont = new AbortController();
@@ -35,40 +28,14 @@ const DetailQuestion = () => {
 					setQuestion(data);
 				})
 				.catch(err => {
-					console.log(err);
+					history.push('/page404');
+					//console.log(err);
 				});
 
 			return () => abortCont.abort();
 			//console.log(question);
 		}, 400);
 	}, []);
-
-	useEffect(() => {
-		setAnsTime(moment(Date.now()).format(format1));
-	}, []);
-
-	const onClickHandler = e => {
-		e.preventDefault();
-		//console.log(ansBrief, ' aB ');
-		/* trying to add nested object to same object  */
-
-		/* axios
-			.post(`http://localhost:4000/answers/${id}`, {
-				
-					answerBrief: ansBrief,
-					answerCode: ansCode,
-					answerAuthor: ansBy,
-					answerTime: ansTime,
-					comments: [],
-				},
-			})
-			.then(res => {
-				console.log(res.data);
-			})
-			.catch(err => {
-				console.log(err);
-			}); */
-	};
 
 	return (
 		<div className=''>
@@ -154,56 +121,6 @@ const DetailQuestion = () => {
 										</span>
 									</div>
 								</div>
-							</div>
-						</div>
-					</div>
-
-					<div className='mt-44  '>
-						<div className=''>
-							<p className='text-lg font-normal leading-8'>7 Answers</p>
-						</div>
-						<div className=''>
-							<div className=''>
-								<span className='text-lg font-normal leading-8'>
-									Your Answer
-								</span>
-							</div>
-							<div className=''>
-								<form className='' onSubmit={onClickHandler}>
-									<textarea
-										type='text'
-										className='outline-none border-2 border-gray-300 h-10 w-full lg:w-5/6 text-sm text-left pt-2 pl-2'
-										placeholder='Answer in Brief'
-										value={ansBrief}
-										onInput={e => setAnsBrief(e.target.value)}
-										required
-									/>
-									<textarea
-										type='text'
-										className='outline-none border-2 border-gray-300 h-40 w-full lg:w-5/6 text-sm text-left pt-2 pl-2'
-										placeholder='Code'
-										value={ansCode}
-										onInput={e => setAnsCode(e.target.value)}
-									/>
-									<div className=''>
-										<input
-											type='text'
-											className='outline-none border-2 border-gray-300 text-sm h-10 w-auto pl-2'
-											placeholder='Answered By'
-											value={ansBy}
-											onInput={e => setAnsBy(e.target.value)}
-											required
-										/>
-									</div>
-									<div className='mt-4'>
-										<button
-											className='bg-blue-500 text-sm text-white p-2 hover:bg-blue-600'
-											onClick={onClickHandler}
-										>
-											Submit Answer
-										</button>
-									</div>
-								</form>
 							</div>
 						</div>
 					</div>

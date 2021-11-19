@@ -13,7 +13,7 @@ const TopQuestions = () => {
 	const [activeAZ, setActiveAZ] = useState(false);
 	const [activeZA, setActiveZA] = useState(false);
 	const [filterHash, setFilterHash] = useState('');
-	const [noResult, setNoResult] = useState(false);
+	const [noResult, setNoResult] = useState(true);
 	const [term] = useContext(SearchContext);
 
 	useEffect(() => {
@@ -107,7 +107,7 @@ const TopQuestions = () => {
 	const onFilterHandler = e => {
 		e.preventDefault();
 		setFilterHash(e.target.value);
-		console.log(e.target.value);
+		//console.log(e.target.value);
 	};
 
 	const onSubmitFilterHandler = e => e.preventDefault();
@@ -205,9 +205,10 @@ const TopQuestions = () => {
 										? allQue
 										: '') &&
 									(term === '' ||
-									allQue.ques.toLowerCase().includes(term.toLowerCase())
-										? allQue
-										: '')
+										(allQues &&
+										allQue.ques?.toLowerCase().includes(term.toLowerCase())
+											? allQue
+											: ''))
 							)
 							.map(allQue => (
 								<EachQuestion
@@ -224,8 +225,11 @@ const TopQuestions = () => {
 					: loading && (
 							<div className='border-gray-400 border-t border-4 rounded-full w-10 h-10 animate-spin absolute top-3/4 md:top-1/2 left-1/2'></div>
 					  )}
-				{/* {!loading || noResult ? <div className=''>No results</div> : ''} */}
-				{/* No results found is incomplete */}
+				{/* {!loading && noResult && !allQues.length ? (
+					<div className=''>No results</div>
+				) : (
+					''
+				)} */}
 			</div>
 		</div>
 	);

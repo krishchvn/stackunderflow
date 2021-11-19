@@ -259,7 +259,7 @@
       "id": "tS0VJp8"
     },
     {
-      "ques": "Material UI Avatar component sizes not changing",
+      "sque": "Material UI Avatar component sizes not changing",
       "quesBrief": "I have this component\n\nimport React, { FC } from \"react\";\nimport { Avatar } from \"@material-ui/core\";\n\nexport interface AvatarProps {\n  alt?: string;\n  src: string;\n  variant?: \"circle\" | \"rounded\" | \"square\";\n  sizes?: string;\n}\n\nconst Component: FC<AvatarProps> = (props: AvatarProps): JSX.Element => {\n  return <Avatar {...props}></Avatar>;\n};\n\nexport default Component;\nI am trying to set the sizes property but it is not changing. What exactly does it take value?",
       "hashes": "reactjs materialUi",
       "author": "jordan peterson",
@@ -280,6 +280,25 @@
     },
     {
       "id": "Dodqqr7"
+    },
+    {
+      "id": "241j584"
+    },
+    {
+      "ques": "Anuj patle doesn't understand shit",
+      "quesBrief": "Nothing",
+      "hashes": "cpp shit",
+      "author": "Anuj",
+      "dateTime": "2021-11-15 17:13:17",
+      "sortOrder": 36,
+      "code": "#include<iostream>\nusing namespace std;\nint main(){\n\n}",
+      "id": "YrgZiTs"
+    },
+    {
+      "id": "8vqOaxq"
+    },
+    {
+      "id": "yw9li1M"
     }
   ]
 }
